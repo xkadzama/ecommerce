@@ -11,5 +11,5 @@ class Category(Base):
 	name: Mapped[str] = mapped_column(String(50), nullable=False)
 	is_active: Mapped[bool] = mapped_column(Boolean, default=True)
 
-	products: Mapped['Products'] = relationship('Products', back_populates='category')
+	products: Mapped[list['Product']] = relationship('Product', back_populates='category')
 
