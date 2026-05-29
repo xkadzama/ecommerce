@@ -1,10 +1,11 @@
 from fastapi import APIRouter
-
+from app.schemas import Category, CategoryCreate
 
 router = APIRouter(
 	prefix='/categories',
-	tags=['categories']
+	tags=['Сategories']
 )
+
 
 @router.get('/')
 async def get_all_categories():
@@ -24,3 +25,4 @@ async def update_category(category_id: int):
 @router.delete('/{category_id}')
 async def delete_category(category_id: int):
 	return {'message': f'Категория c ID {category_id} удалена (заглушка)'}
+
