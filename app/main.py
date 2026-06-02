@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from app.routers import categories
-from app.routers import products
+from app.routing import categories
+from app.routing import products
 
 app = FastAPI(title='FastAPI интернет магазин', version='0.1.0')
 
